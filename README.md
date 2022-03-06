@@ -1,0 +1,50 @@
+### Yapýlacaklar 
+- [X] Data katmanýna ilgili classlarýn oluþturulmasý
+	- Kitap
+        - Id Guid (contructor'da otomaik deðer atansýn.)
+        - Ad string
+        - BasimTarihi DateTime
+        - KitapTurEnum KitapTuru
+        - YazarAd string
+        - SayfaSayisi int
+        - Aciklama string
+        - DateTime? OduncAlinmaTarihi
+    - KitapTurEnum
+        - Egitim,Psikoloji,Korku,Biyografi,....
+    - Kullanýcý
+        - Id Guid (contructor'da otomaik deðer atansýn.)
+        - AdSoyad string
+        - KullaniciAdi string
+        - Parola string
+        - List< Kitap > OduncAlinanKitaplar
+    - KullanýcýYontecisi
+        - Kullanýcý listesi olmalý ve tüm iþlemler bu liste üzerinden yapýlmalý.
+        - KayýtOl methodu
+        - GirisYap methodu
+        - KullaniciVarMi methodu
+    - KutuphaneYoneticisi
+        - Kitap listesi olmalý ve tüm iþlemler bu liste üzerinden yapýlmalý.
+        - KitapBagisYap methodu
+        - KitapImhaEt methodu
+        - KitapOduncAl methodu parametre kullanýcý ve kitap
+- [X] Register ve Login sayfalarýnýn tasarlanmasý
+    - Görsel tasarýmýn yapýlmasý.
+    - Register sayfasýnda parola eþleþme kontrolü
+    - Ayný kullanýcý adýna sahip kiþi var mý kontrolü
+    - Register ve login iþlemleri methodlar kullanýlarak
+    - Login baþarýlýysa KutuphaneForm acilsin. 
+    - LoginForm açýlýr ve kapanýrken Kullanýcýyoneticisini serialize ve deserialize ediniz.
+- [ ] KutuphaneForm
+    - KutuphaneForm açýlýr ve kapanýrken kutuphaneyoneticisi serialize ve deserialize edilir.
+    - Kutuphaneform'da menustripdeki butonlara týklandýðýnda ilgili formlarýn açýlmasý.
+    - Çýkýþ yap özelliði 
+    - Context menu strip kullanýlarak kitap imha et ve kitap ödünç al özelliklerinin eklenmesi.
+    - txt arama ve combobox turlerdeki seçim ve text deðiþtiðinde datagridviewde ilgili kitaplarýn listelenmesi.
+- [ ] HesabýmForm
+    - HesabýmSayfasýnda giriþ yapan kullanýcý bilgileri gösterilir.
+- [ ] BagisYap Form
+    - BagisYap fromda ilgili kitap bilgileri alýnarak bir kitap kutuphanedeki kitaplara eklenir.
+- [ ] Çýkýþ Yap  Butonu
+    - Kutuphane formu kapatarak loginforma geri döner ve baþka bir kullanýcý ile giriþ yapma imkaný saðlar.
+- [ ] Ekstra Görev:
+    - Kullanýcýnýn ödünç aldýðý kitabýn teslim süresi geçtiðinde nasýl bir sistem tasaralayabiliriz?
